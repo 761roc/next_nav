@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ToolNext
 
-## Getting Started
+A Next.js multilingual navigation hub (minimal + light glassmorphism) ready for Cloudflare Pages CI/CD from GitHub.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16 + TypeScript + App Router
+- `next-intl` for i18n (`zh`, `zh-Hant`, `en`, `fr`, `ja`)
+- `next-themes` for `light` / `dark` / `system` theme modes
+- Tailwind CSS v4 + custom glassmorphism styles
+
+## Features
+
+- Clickable navigation cards for both external URLs and internal routes.
+- Theme switcher with `light`, `dark`, `system` (default `light`).
+- Locale switcher with Chinese as default locale.
+- Minimal UI with lightweight glass effects and responsive layout.
+
+## Local Development
 
 ```bash
-npm run dev
-# or
+yarn install --registry=https://registry.npmmirror.com
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## i18n Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Messages: `src/messages/{zh,zh-Hant,en,fr,ja}.json`
+- Routing: `src/i18n/routing.ts`
+- Middleware: `middleware.ts`
 
-## Learn More
+## Cloudflare Pages Deployment (GitHub Auto Deploy)
 
-To learn more about Next.js, take a look at the following resources:
+1. Push this project to GitHub (`main` branch).
+2. In Cloudflare dashboard: `Workers & Pages` -> `Create` -> `Pages` -> `Connect to Git`.
+3. Select this repository.
+4. Use build settings:
+   - Framework preset: `Next.js`
+   - Build command: `yarn build`
+   - Build output directory: `.next`
+5. Set environment variables and Node.js version in Cloudflare Pages project settings if needed.
+6. Every push to `main` triggers production deployment; pull requests trigger preview deployments.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Useful Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+yarn dev
+yarn lint
+yarn build
+yarn start
+```

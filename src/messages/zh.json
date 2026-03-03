@@ -1,0 +1,64 @@
+{
+  "common": {
+    "siteTitle": "ToolNext 导航",
+    "siteSubtitle": "极简与轻玻璃风格的多语言导航页，支持主题与语言快速切换。"
+  },
+  "theme": {
+    "label": "主题模式",
+    "light": "亮色",
+    "dark": "暗色",
+    "system": "自动"
+  },
+  "locale": {
+    "label": "语言",
+    "zh": "中文简体",
+    "zh-Hant": "中文繁體",
+    "en": "English",
+    "fr": "Français",
+    "ja": "日本語"
+  },
+  "nav": {
+    "sectionTitle": "热门站点",
+    "badgeExternal": "站外",
+    "badgeInternal": "站内",
+    "items": {
+      "google": {
+        "title": "Google",
+        "description": "全球搜索引擎入口。"
+      },
+      "youtube": {
+        "title": "YouTube",
+        "description": "全球主流视频平台。"
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "代码托管与协作平台。"
+      },
+      "wikipedia": {
+        "title": "Wikipedia",
+        "description": "开放百科知识网站。"
+      },
+      "x": {
+        "title": "X",
+        "description": "全球化社交信息流。"
+      },
+      "reddit": {
+        "title": "Reddit",
+        "description": "大型社区讨论平台。"
+      },
+      "stackoverflow": {
+        "title": "Stack Overflow",
+        "description": "开发者问答社区。"
+      },
+      "about": {
+        "title": "关于本站",
+        "description": "站内页面示例。"
+      }
+    }
+  },
+  "about": {
+    "title": "关于这个项目",
+    "body": "这个导航页使用 Next.js App Router、next-intl 和 next-themes 构建，适合部署到 Cloudflare Pages。",
+    "backHome": "返回首页"
+  }
+}

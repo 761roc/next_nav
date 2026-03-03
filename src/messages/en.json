@@ -1,0 +1,64 @@
+{
+  "common": {
+    "siteTitle": "ToolNext Hub",
+    "siteSubtitle": "A minimal, light-glass multilingual launcher with quick theme and locale switching."
+  },
+  "theme": {
+    "label": "Theme mode",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "locale": {
+    "label": "Language",
+    "zh": "Chinese (Simplified)",
+    "zh-Hant": "Chinese (Traditional)",
+    "en": "English",
+    "fr": "French",
+    "ja": "Japanese"
+  },
+  "nav": {
+    "sectionTitle": "Popular links",
+    "badgeExternal": "External",
+    "badgeInternal": "Internal",
+    "items": {
+      "google": {
+        "title": "Google",
+        "description": "Entry point to global search."
+      },
+      "youtube": {
+        "title": "YouTube",
+        "description": "Mainstream global video platform."
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "Code hosting and collaboration."
+      },
+      "wikipedia": {
+        "title": "Wikipedia",
+        "description": "Open encyclopedia for knowledge discovery."
+      },
+      "x": {
+        "title": "X",
+        "description": "Global social timeline and news pulse."
+      },
+      "reddit": {
+        "title": "Reddit",
+        "description": "Large online discussion communities."
+      },
+      "stackoverflow": {
+        "title": "Stack Overflow",
+        "description": "Developer Q&A platform."
+      },
+      "about": {
+        "title": "About this site",
+        "description": "An internal route example."
+      }
+    }
+  },
+  "about": {
+    "title": "About This Project",
+    "body": "This navigation app is built with Next.js App Router, next-intl, and next-themes, and is suitable for Cloudflare Pages deployment.",
+    "backHome": "Back to Home"
+  }
+}

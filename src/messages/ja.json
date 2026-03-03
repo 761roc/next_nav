@@ -1,0 +1,64 @@
+{
+  "common": {
+    "siteTitle": "ToolNext ナビ",
+    "siteSubtitle": "ミニマルでライトなガラス調デザインの多言語ランチャー。テーマと言語を素早く切り替えできます。"
+  },
+  "theme": {
+    "label": "テーマモード",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "locale": {
+    "label": "言語",
+    "zh": "中国語（簡体字）",
+    "zh-Hant": "中国語（繁体字）",
+    "en": "英語",
+    "fr": "フランス語",
+    "ja": "日本語"
+  },
+  "nav": {
+    "sectionTitle": "よく使うサイト",
+    "badgeExternal": "外部",
+    "badgeInternal": "内部",
+    "items": {
+      "google": {
+        "title": "Google",
+        "description": "世界的な検索エンジンへの入口。"
+      },
+      "youtube": {
+        "title": "YouTube",
+        "description": "主要なグローバル動画プラットフォーム。"
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "コードホスティングと共同開発。"
+      },
+      "wikipedia": {
+        "title": "Wikipedia",
+        "description": "知識探索のためのオープン百科事典。"
+      },
+      "x": {
+        "title": "X",
+        "description": "グローバルなソーシャルタイムライン。"
+      },
+      "reddit": {
+        "title": "Reddit",
+        "description": "大規模なオンラインコミュニティ。"
+      },
+      "stackoverflow": {
+        "title": "Stack Overflow",
+        "description": "開発者向けQ&Aプラットフォーム。"
+      },
+      "about": {
+        "title": "このサイトについて",
+        "description": "内部ページのサンプル。"
+      }
+    }
+  },
+  "about": {
+    "title": "このプロジェクトについて",
+    "body": "このナビゲーションアプリは Next.js App Router、next-intl、next-themes で構築され、Cloudflare Pages へのデプロイに適しています。",
+    "backHome": "ホームへ戻る"
+  }
+}

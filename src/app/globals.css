@@ -1,26 +1,203 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-ui: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans",
+    "Noto Sans CJK SC", "Noto Sans JP", sans-serif;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  --bg-base: #f5f8fc;
+  --bg-elevated: rgba(255, 255, 255, 0.58);
+  --text-main: #102033;
+  --text-subtle: #4a5a6f;
+  --card-border: rgba(255, 255, 255, 0.62);
+  --card-shadow: 0 24px 52px -30px rgba(14, 36, 64, 0.45);
+  --control-radius: 999px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg-base: #08101a;
+  --bg-elevated: rgba(11, 22, 37, 0.58);
+  --text-main: #e5effc;
+  --text-subtle: #a8b8cc;
+  --card-border: rgba(255, 255, 255, 0.18);
+  --card-shadow: 0 24px 52px -30px rgba(0, 0, 0, 0.72);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  color: var(--text-main);
+  background: var(--bg-base);
+}
+
+.page-wrap {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: -25% -10% auto;
+  height: 68vh;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 22%, rgba(88, 188, 252, 0.28), transparent 48%),
+    radial-gradient(circle at 80% 18%, rgba(40, 110, 192, 0.24), transparent 44%),
+    radial-gradient(circle at 52% 72%, rgba(132, 224, 175, 0.2), transparent 52%);
+  filter: blur(12px);
+}
+
+.content-shell {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  width: min(1060px, 100%);
+  padding-top: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.glass-card {
+  border: 1px solid var(--card-border);
+  border-radius: 1.1rem;
+  background: var(--bg-elevated);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--card-shadow);
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+}
+
+.badge {
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.32);
+  padding: 0.2rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-subtle);
+}
+
+.control-group {
+  display: inline-flex;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.35rem;
+  border-radius: var(--control-radius);
+  border: 1px solid rgba(16, 32, 51, 0.22);
+  padding: 0.25rem;
+  background: #dce5ef;
+}
+
+.chip {
+  border: 1px solid transparent;
+  border-radius: var(--control-radius);
+  padding: 0.35rem 0.72rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #465a73;
+  background: transparent;
+  cursor: pointer;
+}
+
+.chip-active {
+  background: #1f3550;
+  border-color: #1f3550;
+  color: #f8fbff;
+}
+
+.dark .control-group {
+  border-color: rgba(188, 203, 223, 0.3);
+  background: rgba(8, 16, 26, 0.62);
+}
+
+.dark .chip {
+  color: #bfd0e4;
+}
+
+.dark .chip-active {
+  background: #e6eefb;
+  border-color: #e6eefb;
+  color: #0f2238;
+}
+
+.header-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: nowrap;
+}
+
+.select-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.select-caret {
+  position: absolute;
+  right: 0.56rem;
+  top: 50%;
+  transform: translateY(-53%);
+  font-size: 0.72rem;
+  line-height: 1;
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+
+.locale-select {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: var(--control-radius);
+  border: 1px solid rgba(16, 32, 51, 0.22);
+  background: #dce5ef;
+  color: #1f3148;
+  padding: 0.38rem 1.75rem 0.38rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.dark .locale-select {
+  border-color: rgba(188, 203, 223, 0.3);
+  background: rgba(8, 16, 26, 0.62);
+  color: #e6effc;
+}
+
+@media (max-width: 768px) {
+  .page-wrap {
+    padding: 1rem;
+  }
+
+  .control-group {
+    gap: 0.22rem;
+    padding: 0.16rem;
+  }
+
+  .chip {
+    padding: 0.26rem 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  .header-controls {
+    gap: 0.34rem;
+  }
+
+  .locale-select {
+    padding: 0.3rem 1.55rem 0.3rem 0.5rem;
+    font-size: 0.74rem;
+  }
+
+  .select-caret {
+    right: 0.48rem;
+    font-size: 0.68rem;
+  }
 }

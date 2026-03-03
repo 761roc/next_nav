@@ -1,0 +1,64 @@
+{
+  "common": {
+    "siteTitle": "ToolNext 導航",
+    "siteSubtitle": "極簡與輕玻璃風格的多語言導航頁，支援主題與語言快速切換。"
+  },
+  "theme": {
+    "label": "主題模式",
+    "light": "亮色",
+    "dark": "暗色",
+    "system": "自動"
+  },
+  "locale": {
+    "label": "語言",
+    "zh": "中文简体",
+    "zh-Hant": "中文繁體",
+    "en": "English",
+    "fr": "Français",
+    "ja": "日本語"
+  },
+  "nav": {
+    "sectionTitle": "熱門站點",
+    "badgeExternal": "站外",
+    "badgeInternal": "站內",
+    "items": {
+      "google": {
+        "title": "Google",
+        "description": "全球搜尋引擎入口。"
+      },
+      "youtube": {
+        "title": "YouTube",
+        "description": "全球主流影音平台。"
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "程式碼託管與協作平台。"
+      },
+      "wikipedia": {
+        "title": "Wikipedia",
+        "description": "開放百科知識網站。"
+      },
+      "x": {
+        "title": "X",
+        "description": "全球化社交資訊流。"
+      },
+      "reddit": {
+        "title": "Reddit",
+        "description": "大型社群討論平台。"
+      },
+      "stackoverflow": {
+        "title": "Stack Overflow",
+        "description": "開發者問答社群。"
+      },
+      "about": {
+        "title": "關於本站",
+        "description": "站內頁面示例。"
+      }
+    }
+  },
+  "about": {
+    "title": "關於這個專案",
+    "body": "這個導航頁使用 Next.js App Router、next-intl 與 next-themes 建置，適合部署到 Cloudflare Pages。",
+    "backHome": "返回首頁"
+  }
+}

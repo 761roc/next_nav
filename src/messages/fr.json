@@ -1,0 +1,64 @@
+{
+  "common": {
+    "siteTitle": "Portail ToolNext",
+    "siteSubtitle": "Un lanceur multilingue minimal en verre léger avec changement rapide de thème et de langue."
+  },
+  "theme": {
+    "label": "Mode de thème",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "locale": {
+    "label": "Langue",
+    "zh": "Chinois simplifié",
+    "zh-Hant": "Chinois traditionnel",
+    "en": "Anglais",
+    "fr": "Français",
+    "ja": "Japonais"
+  },
+  "nav": {
+    "sectionTitle": "Liens fréquents",
+    "badgeExternal": "Externe",
+    "badgeInternal": "Interne",
+    "items": {
+      "google": {
+        "title": "Google",
+        "description": "Point d'entrée pour la recherche mondiale."
+      },
+      "youtube": {
+        "title": "YouTube",
+        "description": "Plateforme vidéo mondiale majeure."
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "Hébergement de code et collaboration."
+      },
+      "wikipedia": {
+        "title": "Wikipedia",
+        "description": "Encyclopédie ouverte pour explorer les connaissances."
+      },
+      "x": {
+        "title": "X",
+        "description": "Flux social mondial et actualités."
+      },
+      "reddit": {
+        "title": "Reddit",
+        "description": "Grandes communautés de discussion en ligne."
+      },
+      "stackoverflow": {
+        "title": "Stack Overflow",
+        "description": "Plateforme de questions/réponses pour développeurs."
+      },
+      "about": {
+        "title": "À propos du site",
+        "description": "Exemple de route interne."
+      }
+    }
+  },
+  "about": {
+    "title": "À propos du projet",
+    "body": "Cette application de navigation est construite avec Next.js App Router, next-intl et next-themes, et convient à un déploiement sur Cloudflare Pages.",
+    "backHome": "Retour à l'accueil"
+  }
+}
