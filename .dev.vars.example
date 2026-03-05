@@ -1,0 +1,3 @@
+# Copy to .dev.vars when local preview needs environment variables.
+# Example:
+# API_BASE_URL=https://example.com

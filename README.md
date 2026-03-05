@@ -1,47 +1,68 @@
 # ToolNext
 
-A Next.js multilingual navigation hub (minimal + light glassmorphism) ready for Cloudflare Pages CI/CD from GitHub.
+This project is reinitialized with a fresh Next.js 16 setup while keeping all app features under `src/` unchanged.
 
-## Tech Stack
+## Stack
 
-- Next.js 16 + TypeScript + App Router
-- `next-intl` for i18n (`zh`, `zh-Hant`, `en`, `fr`, `ja`)
-- `next-themes` for `light` / `dark` / `system` theme modes
-- Tailwind CSS v4 + custom glassmorphism styles
-
-## Features
-
-- Clickable navigation cards for both external URLs and internal routes.
-- Theme switcher with `light`, `dark`, `system` (default `light`).
-- Locale switcher with Chinese as default locale.
-- Minimal UI with lightweight glass effects and responsive layout.
+- Next.js 16 (App Router, TypeScript)
+- `next-intl` i18n
+- `next-themes`
+- Tailwind CSS v4
+- Cloudflare Workers deployment via `@opennextjs/cloudflare`
 
 ## Local Development
 
 ```bash
-yarn install --registry=https://registry.npmmirror.com
+yarn install
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## i18n Structure
+## Install Dependencies with `proxy_on`
 
-- Messages: `src/messages/{zh,zh-Hant,en,fr,ja}.json`
-- Routing: `src/i18n/routing.ts`
-- Middleware: `middleware.ts`
+If your environment provides `proxy_on` command, you can enable CLI proxy during install:
 
-## Cloudflare Pages Deployment (GitHub Auto Deploy)
+```bash
+yarn install:proxy
+```
 
-1. Push this project to GitHub (`main` branch).
-2. In Cloudflare dashboard: `Workers & Pages` -> `Create` -> `Pages` -> `Connect to Git`.
-3. Select this repository.
-4. Use build settings:
-   - Framework preset: `Next.js`
-   - Build command: `yarn build`
-   - Build output directory: `.next`
-5. Set environment variables and Node.js version in Cloudflare Pages project settings if needed.
-6. Every push to `main` triggers production deployment; pull requests trigger preview deployments.
+Equivalent manual form:
+
+```bash
+proxy_on yarn install
+```
+
+## Cloudflare Deployment (Workers)
+
+1. Login once:
+
+```bash
+npx wrangler login
+```
+
+2. Build OpenNext output:
+
+```bash
+yarn build:cf
+```
+
+3. Deploy:
+
+```bash
+yarn deploy
+```
+
+4. Optional local preview:
+
+```bash
+yarn preview
+```
+
+## Environment Variables
+
+- For preview/deploy local env, copy `.dev.vars.example` to `.dev.vars` and fill values if needed.
+- For production, set variables in Cloudflare dashboard (Workers -> Settings -> Variables).
 
 ## Useful Scripts
 
@@ -49,5 +70,9 @@ Open [http://localhost:3000](http://localhost:3000).
 yarn dev
 yarn lint
 yarn build
-yarn start
+yarn build:cf
+yarn preview
+yarn deploy
+yarn cf-typegen
+yarn install:proxy
 ```
