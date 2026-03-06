@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
     "build:cf": "opennextjs-cloudflare build",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "install:proxy": "sh -c 'if command -v proxy_on >/dev/null 2>&1; then proxy_on yarn install; else echo \"proxy_on not found, fallback to direct install\"; yarn install; fi'",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:next": "next build"
   },
   "engines": {
     "node": ">=20"

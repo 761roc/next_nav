@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "ToolNext",
-  description: "Cloudflare-ready multilingual glassmorphism navigation hub.",
+  metadataBase: new URL(siteConfig.siteUrl),
+  title: {
+    default: "ToolNext",
+    template: "%s | ToolNext",
+  },
+  applicationName: siteConfig.name,
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.shortName,
+    statusBarStyle: "default",
+  },
 };
 
 export default function RootLayout({
@@ -13,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh" suppressHydrationWarning>
-      <body className="antialiased">
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

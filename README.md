@@ -41,11 +41,13 @@ proxy_on yarn install
 npx wrangler login
 ```
 
-2. Build OpenNext output:
+2. Build OpenNext output (Cloudflare CI should run `yarn build`):
 
 ```bash
-yarn build:cf
+yarn build
 ```
+
+(Optional: `yarn build:cf` is an alias)
 
 3. Deploy:
 
@@ -70,6 +72,7 @@ yarn preview
 yarn dev
 yarn lint
 yarn build
+yarn build:next
 yarn build:cf
 yarn preview
 yarn deploy
