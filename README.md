@@ -41,11 +41,13 @@ proxy_on yarn install
 npx wrangler login
 ```
 
-2. Build OpenNext output:
+2. Build OpenNext output (for Cloudflare Workers):
 
 ```bash
 yarn build:cf
 ```
+
+> Important: In Cloudflare build settings, set **Build command** to `yarn build:cf` (not `yarn build`).
 
 3. Deploy:
 
@@ -71,6 +73,7 @@ yarn dev
 yarn lint
 yarn build
 yarn build:cf
+yarn build:next
 yarn preview
 yarn deploy
 yarn cf-typegen
