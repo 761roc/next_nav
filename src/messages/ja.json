@@ -60,5 +60,15 @@
     "title": "このプロジェクトについて",
     "body": "このナビゲーションアプリは Next.js App Router、next-intl、next-themes で構築され、Cloudflare Pages へのデプロイに適しています。",
     "backHome": "ホームへ戻る"
+  },
+  "seo": {
+    "title": "ToolNext ナビ | 有名サイトとオンラインツール集",
+    "description": "ToolNext は有名サイトとカスタムオンラインツールをまとめた多言語ナビゲーションハブで、日々の作業効率を高めます。",
+    "keywords": "ナビゲーションハブ,オンラインツール,有名サイト,生産性ツール,スタートページ,ToolNext",
+    "contentTitle": "ToolNext をスタートページにする理由",
+    "contentIntro": "ToolNext は信頼できるサイトと便利なツールを一箇所にまとめ、検索・学習・開発へのアクセスを高速化します。",
+    "bullet1": "検索・動画・開発・SNS・知識カテゴリの厳選リンクを掲載。",
+    "bullet2": "多言語対応とテーマ切替で幅広いユーザーに対応。",
+    "bullet3": "カスタムツールを継続追加できる拡張性の高い設計。"
   }
 }
