@@ -60,5 +60,15 @@
     "title": "關於這個專案",
     "body": "這個導航頁使用 Next.js App Router、next-intl 與 next-themes 建置，適合部署到 Cloudflare Pages。",
     "backHome": "返回首頁"
+  },
+  "seo": {
+    "title": "ToolNext 導航站｜知名網站與線上工具集合",
+    "description": "ToolNext 提供知名網站導航與自訂工具集合，幫助你一站式存取搜尋、影音、開發、社群與知識資源。",
+    "keywords": "網站導航,工具導航,線上工具集合,知名網站大全,效率工具,ToolNext",
+    "contentTitle": "為什麼選擇 ToolNext 導航站",
+    "contentIntro": "ToolNext 聚合高頻使用的網站與工具，適合個人收藏、團隊共享與跨裝置快速存取。",
+    "bullet1": "涵蓋搜尋、影音、開發、社群、知識等核心站點。",
+    "bullet2": "支援多語言與深色模式，適合全球使用者。",
+    "bullet3": "持續擴充自訂工具與精選站點，打造長期可用的效率入口。"
   }
 }

@@ -60,5 +60,15 @@
     "title": "关于这个项目",
     "body": "这个导航页使用 Next.js App Router、next-intl 和 next-themes 构建，适合部署到 Cloudflare Pages。",
     "backHome": "返回首页"
+  },
+  "seo": {
+    "title": "ToolNext 导航站｜知名网站与在线工具集合",
+    "description": "ToolNext 提供知名网站导航与自定义工具集合，帮助你一站式访问搜索、视频、开发、社区与知识资源。",
+    "keywords": "网站导航,工具导航,在线工具集合,知名网站大全,效率工具,ToolNext",
+    "contentTitle": "为什么选择 ToolNext 导航站",
+    "contentIntro": "ToolNext 聚合高频访问的网站与工具，适合个人收藏、团队共享与跨设备快速访问。",
+    "bullet1": "覆盖搜索、视频、开发、社交、知识等核心站点。",
+    "bullet2": "支持多语言与深色模式，适合全球用户访问。",
+    "bullet3": "持续扩展自定义工具与精选站点，打造长期可用的效率入口。"
   }
 }

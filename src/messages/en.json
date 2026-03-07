@@ -60,5 +60,15 @@
     "title": "About This Project",
     "body": "This navigation app is built with Next.js App Router, next-intl, and next-themes, and is suitable for Cloudflare Pages deployment.",
     "backHome": "Back to Home"
+  },
+  "seo": {
+    "title": "ToolNext Hub | Curated Popular Sites and Online Tools",
+    "description": "ToolNext is a multilingual navigation hub for popular websites and custom online tools, designed for faster daily workflows.",
+    "keywords": "navigation hub,online tools,popular websites,productivity tools,bookmark start page,ToolNext",
+    "contentTitle": "Why Use ToolNext as Your Start Page",
+    "contentIntro": "ToolNext combines trusted sites and practical tools in one place, so you can launch work, research, and discovery faster.",
+    "bullet1": "Curated links across search, video, coding, social, and knowledge categories.",
+    "bullet2": "Multilingual experience with theme switching for global users.",
+    "bullet3": "Built to grow with custom tools and long-term curation."
   }
 }
