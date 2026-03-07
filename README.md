@@ -63,6 +63,7 @@ yarn preview
 
 - For preview/deploy local env, copy `.dev.vars.example` to `.dev.vars` and fill values if needed.
 - For production, set variables in Cloudflare dashboard (Workers -> Settings -> Variables).
+- Set `NEXT_PUBLIC_SITE_URL` to your canonical domain (for example `https://nav.iupeng.top`) so generated canonical URLs, `robots.txt`, and `sitemap.xml` always point to your real site.
 
 ## Useful Scripts
 
