@@ -59,6 +59,10 @@
         "title": "Stack Overflow",
         "description": "開発者向けQ&Aプラットフォーム。"
       },
+      "official": {
+        "title": "公式サイト",
+        "description": "GSAPアニメ付き ToolNext 公式サイトへ。"
+      },
       "about": {
         "title": "このサイトについて",
         "description": "内部ページのサンプル。"

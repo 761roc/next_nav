@@ -59,6 +59,10 @@
         "title": "Stack Overflow",
         "description": "開發者問答社群。"
       },
+      "official": {
+        "title": "官網入口",
+        "description": "進入 ToolNext 科技感動畫官網。"
+      },
       "about": {
         "title": "關於本站",
         "description": "站內頁面示例。"

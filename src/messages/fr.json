@@ -59,6 +59,10 @@
         "title": "Stack Overflow",
         "description": "Plateforme de questions/réponses pour développeurs."
       },
+      "official": {
+        "title": "Site officiel",
+        "description": "Ouvrir le site officiel ToolNext avec animations GSAP."
+      },
       "about": {
         "title": "À propos du site",
         "description": "Exemple de route interne."

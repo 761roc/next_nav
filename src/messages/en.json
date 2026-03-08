@@ -59,6 +59,10 @@
         "title": "Stack Overflow",
         "description": "Developer Q&A platform."
       },
+      "official": {
+        "title": "Official Site",
+        "description": "Open the cinematic ToolNext official website."
+      },
       "about": {
         "title": "About this site",
         "description": "An internal route example."
