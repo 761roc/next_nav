@@ -21,6 +21,15 @@
     "sectionTitle": "熱門站點",
     "badgeExternal": "站外",
     "badgeInternal": "站內",
+    "insightsTitle": "數據速覽",
+    "insightsSubtitle": "入口結構、類型占比與標籤熱度",
+    "metricTotal": "連結總量",
+    "metricExternal": "外部連結",
+    "metricInternal": "內部連結",
+    "metricTags": "標籤數",
+    "metricTopTag": "熱門標籤",
+    "distributionTitle": "類型分佈",
+    "tagTitle": "標籤熱度",
     "items": {
       "google": {
         "title": "Google",

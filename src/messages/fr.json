@@ -21,6 +21,15 @@
     "sectionTitle": "Liens fréquents",
     "badgeExternal": "Externe",
     "badgeInternal": "Interne",
+    "insightsTitle": "Aperçu des données",
+    "insightsSubtitle": "Structure, répartition et activité des tags",
+    "metricTotal": "Liens totaux",
+    "metricExternal": "Liens externes",
+    "metricInternal": "Liens internes",
+    "metricTags": "Nombre de tags",
+    "metricTopTag": "Tag principal",
+    "distributionTitle": "Répartition par type",
+    "tagTitle": "Activité des tags",
     "items": {
       "google": {
         "title": "Google",

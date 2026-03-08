@@ -21,6 +21,15 @@
     "sectionTitle": "よく使うサイト",
     "badgeExternal": "外部",
     "badgeInternal": "内部",
+    "insightsTitle": "データ概要",
+    "insightsSubtitle": "構成比・種類別内訳・タグ動向",
+    "metricTotal": "リンク総数",
+    "metricExternal": "外部リンク",
+    "metricInternal": "内部リンク",
+    "metricTags": "タグ数",
+    "metricTopTag": "人気タグ",
+    "distributionTitle": "タイプ分布",
+    "tagTitle": "タグ動向",
     "items": {
       "google": {
         "title": "Google",

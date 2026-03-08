@@ -21,6 +21,15 @@
     "sectionTitle": "Popular links",
     "badgeExternal": "External",
     "badgeInternal": "Internal",
+    "insightsTitle": "Data Snapshot",
+    "insightsSubtitle": "Structure, traffic mix, and tag activity",
+    "metricTotal": "Total links",
+    "metricExternal": "External links",
+    "metricInternal": "Internal links",
+    "metricTags": "Tag count",
+    "metricTopTag": "Top tag",
+    "distributionTitle": "Type distribution",
+    "tagTitle": "Tag activity",
     "items": {
       "google": {
         "title": "Google",

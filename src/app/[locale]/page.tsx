@@ -10,12 +10,23 @@ export default async function LocaleHomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const externalCount = navLinks.filter((item) => item.kind === "external").length;
+  const uniqueTagCount = new Set(
+    navLinks.flatMap((item) => item.tags ?? []),
+  ).size;
 
   return (
     <main className="page-wrap">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <div className="hero-bg" aria-hidden="true" />
-      <section className="content-shell">
-        <AppHeader />
+      <section id="main-content" className="content-shell">
+        <AppHeader
+          totalLinks={navLinks.length}
+          externalLinks={externalCount}
+          tagCount={uniqueTagCount}
+        />
         <NavCardGrid items={navLinks} />
       </section>
     </main>

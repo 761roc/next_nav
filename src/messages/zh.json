@@ -21,6 +21,15 @@
     "sectionTitle": "热门站点",
     "badgeExternal": "站外",
     "badgeInternal": "站内",
+    "insightsTitle": "数据速览",
+    "insightsSubtitle": "入口结构、类型占比与标签热度",
+    "metricTotal": "链接总量",
+    "metricExternal": "外部链接",
+    "metricInternal": "内部链接",
+    "metricTags": "标签数",
+    "metricTopTag": "热门标签",
+    "distributionTitle": "类型分布",
+    "tagTitle": "标签热度",
     "items": {
       "google": {
         "title": "Google",
