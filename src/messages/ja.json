@@ -19,6 +19,8 @@
   },
   "nav": {
     "sectionTitle": "よく使うサイト",
+    "sectionExternalTitle": "ホームの人気サイト",
+    "sectionInternalTitle": "サイト内ページ入口",
     "badgeExternal": "外部",
     "badgeInternal": "内部",
     "insightsTitle": "データ概要",
@@ -66,8 +68,28 @@
       "about": {
         "title": "このサイトについて",
         "description": "内部ページのサンプル。"
+      },
+      "game": {
+        "title": "レトロスネーク",
+        "description": "キーボードで遊べるクラシックなミニゲーム。"
       }
     }
+  },
+  "game": {
+    "title": "レトロスネーク",
+    "subtitle": "最小構成の定番ループ。果実を食べて成長し、壁や自分の体を避けます。",
+    "start": "ゲーム開始",
+    "restart": "リスタート",
+    "backHome": "ホームへ戻る",
+    "controls": "操作: 方向キー / WASD で移動、Space で一時停止/再開、P で一時停止、F で全画面。",
+    "hint": "Spaceで開始。スコアが上がるほど速度も上がります。",
+    "score": "スコア",
+    "best": "最高",
+    "state": "状態",
+    "stateMenu": "待機中",
+    "stateRunning": "プレイ中",
+    "statePaused": "一時停止",
+    "stateGameOver": "ゲームオーバー"
   },
   "about": {
     "title": "このプロジェクトについて",

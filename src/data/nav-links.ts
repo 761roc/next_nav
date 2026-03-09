@@ -89,6 +89,16 @@ export const navLinks: NavLinkItem[] = [
     kind: "internal",
     icon: "i",
     order: 9,
+    tags: ["internal", "info"],
+  },
+  {
+    id: "game",
+    titleKey: "items.game.title",
+    descriptionKey: "items.game.description",
+    href: "/game",
+    kind: "internal",
+    icon: "8B",
+    order: 10,
     tags: ["internal"],
   }
 ];

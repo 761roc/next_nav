@@ -19,6 +19,8 @@
   },
   "nav": {
     "sectionTitle": "Liens fréquents",
+    "sectionExternalTitle": "Sites populaires",
+    "sectionInternalTitle": "Entrées internes du site",
     "badgeExternal": "Externe",
     "badgeInternal": "Interne",
     "insightsTitle": "Aperçu des données",
@@ -66,8 +68,28 @@
       "about": {
         "title": "À propos du site",
         "description": "Exemple de route interne."
+      },
+      "game": {
+        "title": "Snake rétro",
+        "description": "Lancer un mini-jeu d'arcade classique au clavier."
       }
     }
+  },
+  "game": {
+    "title": "Snake rétro",
+    "subtitle": "Boucle classique minimale : mangez des fruits pour grandir et évitez les murs et votre queue.",
+    "start": "Démarrer",
+    "restart": "Recommencer",
+    "backHome": "Retour à l'accueil",
+    "controls": "Contrôles : flèches / WASD pour bouger, Espace pause/reprise, P pause, F plein écran.",
+    "hint": "Appuyez sur Espace pour commencer. Plus le score est haut, plus c'est rapide.",
+    "score": "Score",
+    "best": "Record",
+    "state": "État",
+    "stateMenu": "Prêt",
+    "stateRunning": "En cours",
+    "statePaused": "En pause",
+    "stateGameOver": "Partie terminée"
   },
   "about": {
     "title": "À propos du projet",

@@ -11,9 +11,11 @@ export function NavCardGrid({ items }: NavCardGridProps) {
   const t = useTranslations("nav");
 
   const sortedItems = [...items].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+  const externalItems = sortedItems.filter((item) => item.kind === "external");
+  const internalItems = sortedItems.filter((item) => item.kind === "internal");
   const totalItems = sortedItems.length;
-  const externalCount = sortedItems.filter((item) => item.kind === "external").length;
-  const internalCount = totalItems - externalCount;
+  const externalCount = externalItems.length;
+  const internalCount = internalItems.length;
   const uniqueTags = new Set(sortedItems.flatMap((item) => item.tags ?? []));
   const topTags = Object.entries(
     sortedItems
@@ -103,44 +105,61 @@ export function NavCardGrid({ items }: NavCardGridProps) {
         </aside>
       </div>
       <div className="nav-grid">
-        {sortedItems.map((item, index) => {
-          const commonClassName = `glass-card card-link ${getCardLayoutClass(index)}`;
-
-          const badge =
-            item.kind === "external" ? t("badgeExternal") : t("badgeInternal");
-
-          return item.kind === "external" ? (
-            <a
-              key={item.id}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={commonClassName}
-            >
-              <CardBody
-                title={t(item.titleKey)}
-                description={item.descriptionKey ? t(item.descriptionKey) : ""}
-                badge={badge}
-                logoUrl={getLogoUrl(item)}
-                iconText={item.icon ?? t(item.titleKey).charAt(0)}
-                meta={getMeta(item)}
-              />
-            </a>
-          ) : (
-            <Link key={item.id} href={item.href} className={commonClassName}>
-              <CardBody
-                title={t(item.titleKey)}
-                description={item.descriptionKey ? t(item.descriptionKey) : ""}
-                badge={badge}
-                logoUrl={undefined}
-                iconText={item.icon ?? t(item.titleKey).charAt(0)}
-                meta={getMeta(item)}
-              />
-            </Link>
-          );
-        })}
+        <div className="entry-group">
+          <div className="entry-group-head">
+            <h3>{t("sectionExternalTitle")}</h3>
+            <span>{externalItems.length}</span>
+          </div>
+          <div className="entry-grid">
+            {externalItems.map((item, index) => renderCard(item, index, t))}
+          </div>
+        </div>
+        <div className="entry-group">
+          <div className="entry-group-head">
+            <h3>{t("sectionInternalTitle")}</h3>
+            <span>{internalItems.length}</span>
+          </div>
+          <div className="entry-grid">
+            {internalItems.map((item, index) => renderCard(item, index, t))}
+          </div>
+        </div>
       </div>
     </section>
+  );
+}
+
+function renderCard(item: NavLinkItem, index: number, t: (key: string) => string) {
+  const commonClassName = `glass-card card-link ${getCardLayoutClass(index)}`;
+  const badge = item.kind === "external" ? t("badgeExternal") : t("badgeInternal");
+
+  return item.kind === "external" ? (
+    <a
+      key={item.id}
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={commonClassName}
+    >
+      <CardBody
+        title={t(item.titleKey)}
+        description={item.descriptionKey ? t(item.descriptionKey) : ""}
+        badge={badge}
+        logoUrl={getLogoUrl(item)}
+        iconText={item.icon ?? t(item.titleKey).charAt(0)}
+        meta={getMeta(item)}
+      />
+    </a>
+  ) : (
+    <Link key={item.id} href={item.href} className={commonClassName}>
+      <CardBody
+        title={t(item.titleKey)}
+        description={item.descriptionKey ? t(item.descriptionKey) : ""}
+        badge={badge}
+        logoUrl={undefined}
+        iconText={item.icon ?? t(item.titleKey).charAt(0)}
+        meta={getMeta(item)}
+      />
+    </Link>
   );
 }
 

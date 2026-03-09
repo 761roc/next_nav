@@ -19,6 +19,8 @@
   },
   "nav": {
     "sectionTitle": "熱門站點",
+    "sectionExternalTitle": "首頁熱門網站",
+    "sectionInternalTitle": "本站頁面入口",
     "badgeExternal": "站外",
     "badgeInternal": "站內",
     "insightsTitle": "數據速覽",
@@ -66,8 +68,28 @@
       "about": {
         "title": "關於本站",
         "description": "站內頁面示例。"
+      },
+      "game": {
+        "title": "復古貪吃蛇",
+        "description": "進入經典街機小遊戲，鍵盤即可開玩。"
       }
     }
+  },
+  "game": {
+    "title": "復古貪吃蛇",
+    "subtitle": "最小經典玩法：吃到果實增長身體，撞牆或撞到自己即失敗。",
+    "start": "開始遊戲",
+    "restart": "重新開始",
+    "backHome": "返回首頁",
+    "controls": "操作：方向鍵 / WASD 移動，空格暫停或繼續，P 暫停，F 全螢幕。",
+    "hint": "按空格開始，分數越高速度越快。",
+    "score": "分數",
+    "best": "最高分",
+    "state": "狀態",
+    "stateMenu": "等待開始",
+    "stateRunning": "遊戲進行中",
+    "statePaused": "已暫停",
+    "stateGameOver": "遊戲結束"
   },
   "about": {
     "title": "關於這個專案",

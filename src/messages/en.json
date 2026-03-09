@@ -19,6 +19,8 @@
   },
   "nav": {
     "sectionTitle": "Popular links",
+    "sectionExternalTitle": "Homepage popular websites",
+    "sectionInternalTitle": "Internal page entrances",
     "badgeExternal": "External",
     "badgeInternal": "Internal",
     "insightsTitle": "Data Snapshot",
@@ -66,8 +68,28 @@
       "about": {
         "title": "About this site",
         "description": "An internal route example."
+      },
+      "game": {
+        "title": "Retro Snake",
+        "description": "Open a classic arcade mini game with keyboard controls."
       }
     }
+  },
+  "game": {
+    "title": "Retro Snake",
+    "subtitle": "Minimal classic loop: eat fruits to grow, and avoid walls or your own tail.",
+    "start": "Start game",
+    "restart": "Restart",
+    "backHome": "Back to Home",
+    "controls": "Controls: Arrow keys / WASD move, Space pauses/resumes, P pauses, F toggles fullscreen.",
+    "hint": "Press Space to start. Higher score means higher speed.",
+    "score": "Score",
+    "best": "Best",
+    "state": "State",
+    "stateMenu": "Ready",
+    "stateRunning": "Running",
+    "statePaused": "Paused",
+    "stateGameOver": "Game Over"
   },
   "about": {
     "title": "About This Project",

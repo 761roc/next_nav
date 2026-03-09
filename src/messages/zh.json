@@ -19,6 +19,8 @@
   },
   "nav": {
     "sectionTitle": "热门站点",
+    "sectionExternalTitle": "首页热门网站",
+    "sectionInternalTitle": "本站页面入口",
     "badgeExternal": "站外",
     "badgeInternal": "站内",
     "insightsTitle": "数据速览",
@@ -66,8 +68,28 @@
       "about": {
         "title": "关于本站",
         "description": "站内页面示例。"
+      },
+      "game": {
+        "title": "复古贪吃蛇",
+        "description": "进入经典街机小游戏，键盘即可开玩。"
       }
     }
+  },
+  "game": {
+    "title": "复古贪吃蛇",
+    "subtitle": "最小经典玩法：吃到果实增长身体，撞墙或撞到自己即失败。",
+    "start": "开始游戏",
+    "restart": "重新开始",
+    "backHome": "返回首页",
+    "controls": "操作：方向键 / WASD 移动，空格暂停或继续，P 暂停，F 全屏。",
+    "hint": "按空格开始，分数越高速度越快。",
+    "score": "分数",
+    "best": "最高分",
+    "state": "状态",
+    "stateMenu": "等待开始",
+    "stateRunning": "游戏进行中",
+    "statePaused": "已暂停",
+    "stateGameOver": "游戏结束"
   },
   "about": {
     "title": "关于这个项目",
