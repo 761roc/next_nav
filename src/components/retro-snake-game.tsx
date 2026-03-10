@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  GRID_SIZE,
   createInitialSnakeState,
   getTickInterval,
   restartSnakeGame,

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test:doudizhu": "node --test src/lib/dou-dizhu-game.test.mjs",
     "test:snake": "node --test src/lib/snake-game.test.mjs",
     "build": "next build",
     "build:cf": "opennextjs-cloudflare build",

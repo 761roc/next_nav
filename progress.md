@@ -38,3 +38,37 @@ Original prompt: [$develop-web-game](/Users/rocm/.codex/skills/develop-web-game/
   `yarn build` passed,
   `yarn lint` passed with existing warnings outside this task.
 - Attempted Playwright game-loop validation via the shared web-game client, but the local environment does not have the `playwright` package installed, so browser automation could not run without adding new tooling.
+
+- New user prompt: design a web-based Dou Dizhu game using the existing repo, with polished UI and an actual playable core rather than a static mock.
+- Replaced the `/[locale]/game` route with a lightweight single-player Dou Dizhu table:
+  player is fixed as landlord, two bots play as farmers, the game supports singles, pairs, triples, triple-with-single, triple-with-pair, straights, bombs, and rocket.
+- Added a pure rules engine in `src/lib/dou-dizhu-game.mjs` for deck creation, dealing, combo validation, turn order, pass/reset handling, simple AI responses, and deterministic AI timing via `advanceGame`.
+- Added `src/components/dou-dizhu-game.tsx` with a felt-table layout, interactive player hand, face-up table pile, bottom cards, bot hand counts, localized feedback text, and `window.render_game_to_text` / `window.advanceTime`.
+- Updated route wiring, nav/game locale strings, and tabletop styling in `src/app/[locale]/game/page.tsx`, `src/messages/*.json`, and `src/app/globals.css`.
+- Added dependency-free logic coverage in `src/lib/dou-dizhu-game.test.mjs` and a `yarn test:doudizhu` script.
+- Verification completed:
+  `node --test src/lib/dou-dizhu-game.test.mjs` passed,
+  `yarn build` passed,
+  `yarn lint` reported only pre-existing warnings outside the new Dou Dizhu files.
+- Web guideline pass:
+  kept 44px+ interactive targets,
+  added visible keyboard focus on playable cards,
+  maintained text contrast and responsive stacking in the touched UI.
+- Playwright/web-game-client validation is still blocked in this environment because the `playwright` package is not installed locally, and no new dependency was added for this request.
+
+- New user prompt: do not overwrite the original Snake game; add a separate Dou Dizhu entry, ensure played cards appear in the shared public area, and make the UI/sound feel lighter.
+- Restored route separation:
+  `/[locale]/game` is Snake again via `src/components/retro-snake-game.tsx`,
+  added a new `/[locale]/doudizhu` route backed by `src/components/dou-dizhu-game.tsx`.
+- Added a second internal nav entry `/doudizhu` in `src/data/nav-links.ts` and split locale copy so `game` maps to Snake while `doudizhu` has its own strings in all message files.
+- Enhanced Dou Dizhu state/UI:
+  added per-player recent actions in the public area via `lastActions` in `src/lib/dou-dizhu-game.mjs`,
+  kept the central active trick area,
+  added a light sound toggle and synthesized card/pass/win tones with Web Audio,
+  shifted the table visuals toward a brighter, lighter tabletop treatment in `src/app/globals.css`.
+- Verification completed after the split:
+  `node --test src/lib/dou-dizhu-game.test.mjs` passed,
+  `node --test src/lib/snake-game.test.mjs` passed,
+  `yarn build` passed with both `/[locale]/game` and `/[locale]/doudizhu`,
+  `yarn lint` shows only pre-existing warnings outside this task plus generated `.open-next` warnings.
+- Playwright-based game-loop validation remains blocked because `playwright` is not installed in the local environment, and no dependency was added.

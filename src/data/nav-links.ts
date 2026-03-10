@@ -100,5 +100,15 @@ export const navLinks: NavLinkItem[] = [
     icon: "8B",
     order: 10,
     tags: ["internal"],
+  },
+  {
+    id: "doudizhu",
+    titleKey: "items.doudizhu.title",
+    descriptionKey: "items.doudizhu.description",
+    href: "/doudizhu",
+    kind: "internal",
+    icon: "DD",
+    order: 11,
+    tags: ["internal", "game", "cards"],
   }
 ];
