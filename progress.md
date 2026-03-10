@@ -26,3 +26,15 @@ Original prompt: [$develop-web-game](/Users/rocm/.codex/skills/develop-web-game/
 - Fixed viewport overflow/cropping issue: switched canvas fit from `cover` to `contain` and centered inside stage, so full game bounds remain visible while preserving aspect ratio.
 - Replaced CSS-only fit strategy with robust ResizeObserver sizing.
 - Canvas now always uses the largest square that fits inside game-stage (no stretch, no crop, no overflow).
+
+- New user prompt: build a classic Snake game with only the core loop, deterministic/testable logic, minimal UI, and tests only if the repo can support them without new dependencies.
+- Refactored the `/[locale]/game` implementation into a classic Snake-only feature set:
+  extracted pure movement/collision/food logic into `src/lib/snake-game.mjs`,
+  simplified rendering to a DOM grid with score/state/restart,
+  kept keyboard controls and added on-screen directional controls for touch/mobile.
+- Added dependency-free core tests with Node's built-in test runner in `src/lib/snake-game.test.mjs` and a `yarn test:snake` script.
+- Verification completed:
+  `node --test src/lib/snake-game.test.mjs` passed,
+  `yarn build` passed,
+  `yarn lint` passed with existing warnings outside this task.
+- Attempted Playwright game-loop validation via the shared web-game client, but the local environment does not have the `playwright` package installed, so browser automation could not run without adding new tooling.

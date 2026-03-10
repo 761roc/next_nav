@@ -668,6 +668,7 @@ a {
 }
 
 .game-stage {
+  position: relative;
   display: grid;
   place-items: center;
   width: 100%;
@@ -682,12 +683,55 @@ a {
   overflow: hidden;
 }
 
-.game-canvas {
-  display: block;
-  border-radius: inherit;
-  border: 0;
-  box-shadow: none;
-  background: #061733;
+.snake-board {
+  display: grid;
+  width: min(100%, 72vh);
+  aspect-ratio: 1 / 1;
+  padding: clamp(0.5rem, 1.4vw, 0.8rem);
+  gap: 3px;
+}
+
+.snake-cell {
+  border-radius: 0.32rem;
+  background: rgba(14, 165, 233, 0.07);
+}
+
+.snake-cell-snake {
+  background: #38bdf8;
+}
+
+.snake-cell-head {
+  background: #22c55e;
+}
+
+.snake-cell-food {
+  background: #f97316;
+}
+
+.snake-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.62);
+  color: #f8fafc;
+}
+
+.snake-overlay-state {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.snake-overlay-hint {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #dbeafe;
 }
 
 .game-toolbar {
@@ -719,6 +763,13 @@ a {
 .game-button:focus-visible {
   outline: 3px solid #bae6fd;
   outline-offset: 2px;
+}
+
+.game-button:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
 }
 
 .game-button-alt {
@@ -754,6 +805,35 @@ a {
 
 .game-back-link {
   width: fit-content;
+}
+
+.game-pad {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.game-pad-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.game-pad-button {
+  min-width: 52px;
+  min-height: 52px;
+  border-radius: 1rem;
+  border: 1px solid rgba(14, 165, 233, 0.28);
+  background: rgba(255, 255, 255, 0.76);
+  color: #0f172a;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.game-pad-button:focus-visible {
+  outline: 3px solid #bae6fd;
+  outline-offset: 2px;
 }
 
 .game-page-shell {
@@ -1173,14 +1253,8 @@ a {
     height: calc(100vh - 3.7rem);
   }
 
-  .game-stage {
+  .snake-board {
     width: 100%;
-    height: 100%;
-  }
-
-  .game-canvas {
-    width: 100%;
-    height: 100%;
   }
 
   .game-page-wrap {
