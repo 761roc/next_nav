@@ -780,9 +780,9 @@
 }
 
 .horizontalSection .panelInner {
-  width: min(1520px, calc(100vw - 2.4rem));
-  margin-left: 0;
-  margin-right: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
 }
 
 @media (min-width: 1500px) {
@@ -811,7 +811,8 @@
   }
 
   .horizontalSection .panelInner {
-    width: min(1320px, calc(100vw - 2rem));
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
   }
 }
